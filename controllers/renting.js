@@ -3,7 +3,7 @@ const rentItems = require("../models/renting")
 const shoppingCart = require("../models/shoppingCart")
 const login = require("../models/login")
 const {StatusCodes} = require("http-status-codes")
-const stripe = require('stripe')(process.env.STRIPE_KEY)
+const stripe = require('stripe')(process.env.STRIPE_BE_KEY)
 
 const rentItem = async(req,res)=>{
     const owner_id = await carListings.findOne({_id:req.body.item_id})
