@@ -1,0 +1,39 @@
+{
+  "name": "se_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.0.3",
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "express-fileupload": "^1.5.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "morgan": "^1.10.0",
+    "node-nlp": "^3.10.2",
+    "nodemailer": "^6.9.10",
+    "nodemon": "^3.1.0",
+    "openai": "^4.33.1",
+    "stripe": "^14.22.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongoose": "^8.3.2",
+    "supertest": "^6.3.4"
+  }
+}

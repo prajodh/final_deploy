@@ -1,0 +1,1285 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ]
+  },
+  "nluManager": {
+    "settings": {},
+    "languages": [
+      "en"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "language": "en",
+          "useNoneFeature": true,
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.7,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.08,
+            "timeout": 120000
+          }
+        },
+        "language": "en",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": false,
+        "keepStopwords": true,
+        "stemDict": {
+          "hello": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "hi": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "hey,you": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "yo": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "good,morn": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "afternoon,good": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "day,good": {
+            "domain": "default",
+            "intent": "greeting"
+          },
+          "a,can,car,how,i,rent": {
+            "domain": "default",
+            "intent": "rental_query"
+          },
+          "are,avail,car,for,rental,what": {
+            "domain": "default",
+            "intent": "availability_query"
+          },
+          "is,locat,where,your": {
+            "domain": "default",
+            "intent": "location_query"
+          },
+          "a,car,cost,doe,how,it,much,rent,to": {
+            "domain": "default",
+            "intent": "cost_query"
+          },
+          "book,can,chang,i,my": {
+            "domain": "default",
+            "intent": "modify_booking_query"
+          },
+          "cancel,i,my,need,reserv,to": {
+            "domain": "default",
+            "intent": "cancel_booking_query"
+          },
+          "ani,discount,do,offer,you": {
+            "domain": "default",
+            "intent": "discount_query"
+          },
+          "a,can,car,i,model,request,specif": {
+            "domain": "default",
+            "intent": "specific_car_query"
+          },
+          "addit,ani,are,charg,there": {
+            "domain": "default",
+            "intent": "extra_charges_query"
+          },
+          "can,extend,how,i,my,period,rental": {
+            "domain": "default",
+            "intent": "extend_rental_query"
+          },
+          "includ,insur,is": {
+            "domain": "default",
+            "intent": "insurance_query"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "rental_query": "default",
+          "availability_query": "default",
+          "location_query": "default",
+          "cost_query": "default",
+          "modify_booking_query": "default",
+          "cancel_booking_query": "default",
+          "discount_query": "default",
+          "specific_car_query": "default",
+          "extra_charges_query": "default",
+          "extend_rental_query": "default",
+          "insurance_query": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "en",
+              "useNoneFeature": true,
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.7,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.08,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "hello"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "hi"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "hey",
+                  "you"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "yo"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "good",
+                  "morn"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "good",
+                  "afternoon"
+                ]
+              },
+              {
+                "intent": "greeting",
+                "tokens": [
+                  "good",
+                  "day"
+                ]
+              },
+              {
+                "intent": "rental_query",
+                "tokens": [
+                  "how",
+                  "can",
+                  "i",
+                  "rent",
+                  "a",
+                  "car"
+                ]
+              },
+              {
+                "intent": "availability_query",
+                "tokens": [
+                  "what",
+                  "car",
+                  "are",
+                  "avail",
+                  "for",
+                  "rental"
+                ]
+              },
+              {
+                "intent": "location_query",
+                "tokens": [
+                  "where",
+                  "is",
+                  "your",
+                  "locat"
+                ]
+              },
+              {
+                "intent": "cost_query",
+                "tokens": [
+                  "how",
+                  "much",
+                  "doe",
+                  "it",
+                  "cost",
+                  "to",
+                  "rent",
+                  "a",
+                  "car"
+                ]
+              },
+              {
+                "intent": "modify_booking_query",
+                "tokens": [
+                  "can",
+                  "i",
+                  "chang",
+                  "my",
+                  "book"
+                ]
+              },
+              {
+                "intent": "cancel_booking_query",
+                "tokens": [
+                  "i",
+                  "need",
+                  "to",
+                  "cancel",
+                  "my",
+                  "reserv"
+                ]
+              },
+              {
+                "intent": "discount_query",
+                "tokens": [
+                  "do",
+                  "you",
+                  "offer",
+                  "ani",
+                  "discount"
+                ]
+              },
+              {
+                "intent": "specific_car_query",
+                "tokens": [
+                  "can",
+                  "i",
+                  "request",
+                  "a",
+                  "specif",
+                  "car",
+                  "model"
+                ]
+              },
+              {
+                "intent": "extra_charges_query",
+                "tokens": [
+                  "are",
+                  "there",
+                  "ani",
+                  "addit",
+                  "charg"
+                ]
+              },
+              {
+                "intent": "extend_rental_query",
+                "tokens": [
+                  "how",
+                  "can",
+                  "i",
+                  "extend",
+                  "my",
+                  "rental",
+                  "period"
+                ]
+              },
+              {
+                "intent": "insurance_query",
+                "tokens": [
+                  "is",
+                  "insur",
+                  "includ"
+                ]
+              }
+            ],
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "hey": 1,
+              "you": 2,
+              "yo": 1,
+              "good": 3,
+              "morn": 1,
+              "afternoon": 1,
+              "day": 1,
+              "how": 3,
+              "can": 4,
+              "i": 5,
+              "rent": 2,
+              "a": 3,
+              "car": 4,
+              "what": 1,
+              "are": 2,
+              "avail": 1,
+              "for": 1,
+              "rental": 2,
+              "where": 1,
+              "is": 2,
+              "your": 1,
+              "locat": 1,
+              "much": 1,
+              "doe": 1,
+              "it": 1,
+              "cost": 1,
+              "to": 2,
+              "chang": 1,
+              "my": 3,
+              "book": 1,
+              "need": 1,
+              "cancel": 1,
+              "reserv": 1,
+              "do": 1,
+              "offer": 1,
+              "ani": 2,
+              "discount": 1,
+              "request": 1,
+              "specif": 1,
+              "model": 1,
+              "there": 1,
+              "addit": 1,
+              "charg": 1,
+              "extend": 1,
+              "period": 1,
+              "insur": 1,
+              "includ": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "useNoneFeature": true,
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.7,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.08,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  50,
+                  13
+                ],
+                "layers": [
+                  {
+                    "hello": {},
+                    "hi": {},
+                    "hey": {},
+                    "you": {},
+                    "yo": {},
+                    "good": {},
+                    "morn": {},
+                    "afternoon": {},
+                    "day": {},
+                    "how": {},
+                    "can": {},
+                    "i": {},
+                    "rent": {},
+                    "a": {},
+                    "car": {},
+                    "what": {},
+                    "are": {},
+                    "avail": {},
+                    "for": {},
+                    "rental": {},
+                    "where": {},
+                    "is": {},
+                    "your": {},
+                    "locat": {},
+                    "much": {},
+                    "doe": {},
+                    "it": {},
+                    "cost": {},
+                    "to": {},
+                    "chang": {},
+                    "my": {},
+                    "book": {},
+                    "need": {},
+                    "cancel": {},
+                    "reserv": {},
+                    "do": {},
+                    "offer": {},
+                    "ani": {},
+                    "discount": {},
+                    "request": {},
+                    "specif": {},
+                    "model": {},
+                    "there": {},
+                    "addit": {},
+                    "charg": {},
+                    "extend": {},
+                    "period": {},
+                    "insur": {},
+                    "includ": {},
+                    "nonefeature": {}
+                  },
+                  {
+                    "greeting": {
+                      "bias": 6.242267026,
+                      "weights": {
+                        "hello": 5.984248161,
+                        "hi": 6.029415131,
+                        "hey": 4.079052925,
+                        "you": 2.149902344,
+                        "yo": 5.945006371,
+                        "good": 4.665072918,
+                        "morn": 1.566630006,
+                        "afternoon": 1.556836843,
+                        "day": 1.541607141,
+                        "how": -0.770383716,
+                        "can": -1.35155797,
+                        "i": -1.995025158,
+                        "rent": -0.770383716,
+                        "a": -0.893703699,
+                        "car": -1.672882915,
+                        "what": -0.779179335,
+                        "are": -1.494044065,
+                        "avail": -0.779179335,
+                        "for": -0.779179335,
+                        "rental": -0.779179335,
+                        "where": -1.157322049,
+                        "is": -2.862212181,
+                        "your": -1.157322049,
+                        "locat": -1.157322049,
+                        "much": -0.306634337,
+                        "doe": -0.306634337,
+                        "it": -0.306634337,
+                        "cost": -0.306634337,
+                        "to": -0.950101078,
+                        "chang": -0.764488578,
+                        "my": -1.407955408,
+                        "book": -0.764488578,
+                        "need": -0.643466532,
+                        "cancel": -0.643466532,
+                        "reserv": -0.643466532,
+                        "do": -1.929150462,
+                        "offer": -1.929150462,
+                        "ani": -2.644014597,
+                        "discount": -1.929150462,
+                        "request": -0.123319998,
+                        "specif": -0.123319998,
+                        "model": -0.123319998,
+                        "there": -0.714864492,
+                        "addit": -0.714864492,
+                        "charg": -0.714864492,
+                        "insur": -1.704891086,
+                        "includ": -1.704891086,
+                        "nonefeature": -5.590652943
+                      }
+                    },
+                    "rental_query": {
+                      "bias": -0.233876819,
+                      "weights": {
+                        "you": -0.009584705,
+                        "how": 2.542999983,
+                        "can": 1.676279664,
+                        "i": 1.602321506,
+                        "rent": 3.721912861,
+                        "a": 1.659169316,
+                        "car": 1.490068674,
+                        "what": -0.169100791,
+                        "are": -0.169100791,
+                        "avail": -0.169100791,
+                        "for": -0.169100791,
+                        "rental": -1.348012924,
+                        "where": -0.070049472,
+                        "is": -0.070049472,
+                        "your": -0.070049472,
+                        "locat": -0.070049472,
+                        "much": -1.820674539,
+                        "doe": -1.820674539,
+                        "it": -1.820674539,
+                        "cost": -1.820674539,
+                        "to": -1.894633174,
+                        "chang": -0.624652743,
+                        "my": -1.877523184,
+                        "book": -0.624652743,
+                        "need": -0.073958404,
+                        "cancel": -0.073958404,
+                        "reserv": -0.073958404,
+                        "do": -0.009584705,
+                        "offer": -0.009584705,
+                        "ani": -0.009584705,
+                        "discount": -0.009584705,
+                        "request": -2.06274271,
+                        "specif": -2.06274271,
+                        "model": -2.06274271,
+                        "extend": -1.178912044,
+                        "period": -1.178912044,
+                        "nonefeature": 2.38e-7
+                      }
+                    },
+                    "availability_query": {
+                      "bias": 0.118844612,
+                      "weights": {
+                        "hello": -0.119367428,
+                        "hi": -0.118289903,
+                        "hey": -0.04919884,
+                        "you": -0.10640911,
+                        "yo": -0.116863251,
+                        "good": -0.124035537,
+                        "morn": -0.045436315,
+                        "afternoon": -0.041563783,
+                        "day": -0.037035435,
+                        "how": -0.414001107,
+                        "can": -0.481791824,
+                        "i": -0.514644384,
+                        "rent": -0.192865685,
+                        "a": -0.396106213,
+                        "car": 1.847554684,
+                        "what": 2.243661404,
+                        "are": 1.77998054,
+                        "avail": 2.243661404,
+                        "for": 2.243661404,
+                        "rental": 2.022526264,
+                        "where": -0.086779952,
+                        "is": -0.128775179,
+                        "your": -0.086779952,
+                        "locat": -0.086779952,
+                        "much": -0.192865685,
+                        "doe": -0.192865685,
+                        "it": -0.192865685,
+                        "cost": -0.192865685,
+                        "to": -0.225718334,
+                        "chang": -0.057415836,
+                        "my": -0.311403871,
+                        "book": -0.057415836,
+                        "need": -0.032852631,
+                        "cancel": -0.032852631,
+                        "reserv": -0.032852631,
+                        "do": -0.057210274,
+                        "offer": -0.057210274,
+                        "ani": -0.520890653,
+                        "discount": -0.057210274,
+                        "request": -0.203240514,
+                        "specif": -0.203240514,
+                        "model": -0.203240514,
+                        "there": -0.463680446,
+                        "addit": -0.463680446,
+                        "charg": -0.463680446,
+                        "extend": -0.221135408,
+                        "period": -0.221135408,
+                        "insur": -0.041995205,
+                        "includ": -0.041995205,
+                        "nonefeature": -0.121008247
+                      }
+                    },
+                    "location_query": {
+                      "bias": 0.22842256,
+                      "weights": {
+                        "hello": -0.229868174,
+                        "hi": -0.227635086,
+                        "hey": -0.101850845,
+                        "you": -0.192423075,
+                        "yo": -0.224800602,
+                        "good": -0.234936059,
+                        "morn": -0.085448503,
+                        "afternoon": -0.078638636,
+                        "day": -0.070848934,
+                        "how": -0.08960028,
+                        "can": -0.125627652,
+                        "i": -0.183125585,
+                        "rent": -0.076412663,
+                        "a": -0.106829338,
+                        "car": -0.129566297,
+                        "what": -0.022736972,
+                        "are": -0.109734252,
+                        "avail": -0.022736972,
+                        "for": -0.022736972,
+                        "rental": -0.035924584,
+                        "where": 3.366431952,
+                        "is": 2.169206381,
+                        "your": 3.366431952,
+                        "locat": 3.366431952,
+                        "much": -0.076412663,
+                        "doe": -0.076412663,
+                        "it": -0.076412663,
+                        "cost": -0.076412663,
+                        "to": -0.133910596,
+                        "chang": -0.082023367,
+                        "my": -0.152708918,
+                        "book": -0.082023367,
+                        "need": -0.05749793,
+                        "cancel": -0.05749793,
+                        "reserv": -0.05749793,
+                        "do": -0.090572216,
+                        "offer": -0.090572216,
+                        "ani": -0.177569509,
+                        "discount": -0.090572216,
+                        "request": -0.030416666,
+                        "specif": -0.030416666,
+                        "model": -0.030416666,
+                        "there": -0.086997285,
+                        "addit": -0.086997285,
+                        "charg": -0.086997285,
+                        "extend": -0.01318762,
+                        "period": -0.01318762,
+                        "insur": -1.197227001,
+                        "includ": -1.197227001,
+                        "nonefeature": -0.233329728
+                      }
+                    },
+                    "cost_query": {
+                      "bias": -0.062343556,
+                      "weights": {
+                        "hello": -0.036699861,
+                        "hi": -0.034874696,
+                        "hey": -0.022475284,
+                        "you": -0.084425934,
+                        "yo": -0.032034915,
+                        "good": -0.070595078,
+                        "morn": -0.026615113,
+                        "afternoon": -0.023668511,
+                        "day": -0.020311456,
+                        "how": 0.895141542,
+                        "can": -1.41344583,
+                        "i": -1.594712615,
+                        "rent": 0.967696369,
+                        "a": 0.650915802,
+                        "car": 0.556762516,
+                        "what": -0.094153278,
+                        "are": -0.130188733,
+                        "avail": -0.094153278,
+                        "for": -0.094153278,
+                        "rental": -0.166708171,
+                        "is": -0.037118766,
+                        "much": 1.934617758,
+                        "doe": 1.934617758,
+                        "it": 1.934617758,
+                        "cost": 1.934617758,
+                        "to": 1.753350973,
+                        "chang": -0.057188578,
+                        "my": -0.311010152,
+                        "book": -0.057188578,
+                        "need": -0.18126671,
+                        "cancel": -0.18126671,
+                        "reserv": -0.18126671,
+                        "do": -0.06195065,
+                        "offer": -0.06195065,
+                        "ani": -0.097986102,
+                        "discount": -0.06195065,
+                        "request": -0.316780686,
+                        "specif": -0.316780686,
+                        "model": -0.316780686,
+                        "there": -0.036035459,
+                        "addit": -0.036035459,
+                        "charg": -0.036035459,
+                        "extend": -0.072554909,
+                        "period": -0.072554909,
+                        "insur": -0.037118766,
+                        "includ": -0.037118766,
+                        "nonefeature": -0.038654532
+                      }
+                    },
+                    "modify_booking_query": {
+                      "bias": 0.124388026,
+                      "weights": {
+                        "hello": -0.124089636,
+                        "hi": -0.122838169,
+                        "hey": -0.04002193,
+                        "you": -0.110972069,
+                        "yo": -0.121230572,
+                        "good": -0.115850836,
+                        "morn": -0.041731331,
+                        "afternoon": -0.038738143,
+                        "day": -0.035381369,
+                        "how": -1.381472826,
+                        "can": 1.860206842,
+                        "i": 1.094760537,
+                        "rent": -0.201333731,
+                        "a": -0.748034716,
+                        "car": -0.748034716,
+                        "are": -0.049044866,
+                        "rental": -1.180138826,
+                        "where": -0.023006229,
+                        "is": -0.076513134,
+                        "your": -0.023006229,
+                        "locat": -0.023006229,
+                        "to": -0.765447199,
+                        "chang": 3.7883811,
+                        "my": 1.842794538,
+                        "book": 3.7883811,
+                        "need": -0.765447199,
+                        "cancel": -0.765447199,
+                        "reserv": -0.765447199,
+                        "do": -0.070950121,
+                        "offer": -0.070950121,
+                        "ani": -0.119994998,
+                        "discount": -0.070950121,
+                        "request": -0.546700954,
+                        "specif": -0.546700954,
+                        "model": -0.546700954,
+                        "there": -0.049044866,
+                        "addit": -0.049044866,
+                        "charg": -0.049044866,
+                        "extend": -1.180138826,
+                        "period": -1.180138826,
+                        "insur": -0.053506903,
+                        "includ": -0.053506903,
+                        "nonefeature": -0.12543489
+                      }
+                    },
+                    "cancel_booking_query": {
+                      "bias": 0.098206699,
+                      "weights": {
+                        "hello": -0.101857908,
+                        "hi": -0.099464059,
+                        "hey": -0.045304466,
+                        "you": -0.122436769,
+                        "yo": -0.09781041,
+                        "good": -0.129687652,
+                        "morn": -0.047859281,
+                        "afternoon": -0.043465063,
+                        "day": -0.038363311,
+                        "how": -0.612520099,
+                        "can": -1.29774785,
+                        "i": 1.203970313,
+                        "rent": -0.201355174,
+                        "a": -0.389633477,
+                        "car": -0.389633477,
+                        "are": -0.056825034,
+                        "rental": -0.41116485,
+                        "where": -0.030611401,
+                        "is": -0.093299896,
+                        "your": -0.030611401,
+                        "locat": -0.030611401,
+                        "much": -0.201355174,
+                        "doe": -0.201355174,
+                        "it": -0.201355174,
+                        "cost": -0.201355174,
+                        "to": 2.300364017,
+                        "chang": -0.698304713,
+                        "my": 1.392248511,
+                        "book": -0.698304713,
+                        "need": 2.501718521,
+                        "cancel": 2.501718521,
+                        "reserv": 2.501718521,
+                        "do": -0.077132307,
+                        "offer": -0.077132307,
+                        "ani": -0.133957341,
+                        "discount": -0.077132307,
+                        "request": -0.188278258,
+                        "specif": -0.188278258,
+                        "model": -0.188278258,
+                        "there": -0.056825034,
+                        "addit": -0.056825034,
+                        "charg": -0.056825034,
+                        "extend": -0.41116485,
+                        "period": -0.41116485,
+                        "insur": -0.062688492,
+                        "includ": -0.062688492,
+                        "nonefeature": -0.104818679
+                      }
+                    },
+                    "discount_query": {
+                      "bias": -0.022033534,
+                      "weights": {
+                        "hello": -0.145163447,
+                        "hi": -0.139391005,
+                        "hey": -1.428682685,
+                        "you": 1.475373983,
+                        "yo": -0.093081273,
+                        "good": -0.143976569,
+                        "morn": -0.053118359,
+                        "afternoon": -0.048253786,
+                        "day": -0.042604417,
+                        "how": -0.054960571,
+                        "can": -0.126943693,
+                        "i": -0.136916935,
+                        "rent": -0.005213652,
+                        "a": -0.082410417,
+                        "car": -0.082410417,
+                        "are": -0.576228142,
+                        "rental": -0.049746916,
+                        "where": -0.030610591,
+                        "is": -0.128123671,
+                        "your": -0.030610591,
+                        "locat": -0.030610591,
+                        "much": -0.005213652,
+                        "doe": -0.005213652,
+                        "it": -0.005213652,
+                        "cost": -0.005213652,
+                        "to": -0.015186918,
+                        "my": -0.059720185,
+                        "need": -0.009973265,
+                        "cancel": -0.009973265,
+                        "reserv": -0.009973265,
+                        "do": 2.904055834,
+                        "offer": 2.904055834,
+                        "ani": 2.327827215,
+                        "discount": 2.904055834,
+                        "request": -0.077196777,
+                        "specif": -0.077196777,
+                        "model": -0.077196777,
+                        "there": -0.576228142,
+                        "addit": -0.576228142,
+                        "charg": -0.576228142,
+                        "extend": -0.049746916,
+                        "period": -0.049746916,
+                        "insur": -0.097513095,
+                        "includ": -0.097513095,
+                        "nonefeature": -0.151262537
+                      }
+                    },
+                    "specific_car_query": {
+                      "bias": -0.058564956,
+                      "weights": {
+                        "hello": -0.069793448,
+                        "hi": -0.066635624,
+                        "hey": -0.056909278,
+                        "you": -0.056909278,
+                        "yo": -0.061064482,
+                        "good": -0.117376536,
+                        "morn": -0.043684635,
+                        "afternoon": -0.039345391,
+                        "day": -0.03434651,
+                        "how": -1.993716002,
+                        "can": 0.691028476,
+                        "i": 0.683043122,
+                        "rent": -1.68751514,
+                        "a": 1.251501441,
+                        "car": 1.115314484,
+                        "what": -0.136186749,
+                        "are": -0.212041944,
+                        "avail": -0.136186749,
+                        "for": -0.136186749,
+                        "rental": -0.442387581,
+                        "is": -0.062467113,
+                        "much": -0.080743775,
+                        "doe": -0.080743775,
+                        "it": -0.080743775,
+                        "cost": -0.080743775,
+                        "to": -0.088729076,
+                        "chang": -0.335015863,
+                        "my": -0.649202168,
+                        "book": -0.335015863,
+                        "need": -0.007985302,
+                        "cancel": -0.007985302,
+                        "reserv": -0.007985302,
+                        "ani": -0.075855203,
+                        "request": 2.939016342,
+                        "specif": 2.939016342,
+                        "model": 2.939016342,
+                        "there": -0.075855203,
+                        "addit": -0.075855203,
+                        "charg": -0.075855203,
+                        "extend": -0.306200832,
+                        "period": -0.306200832,
+                        "insur": -0.062467113,
+                        "includ": -0.062467113,
+                        "nonefeature": -0.073155545
+                      }
+                    },
+                    "extra_charges_query": {
+                      "bias": 0.184720774,
+                      "weights": {
+                        "hello": -0.185875788,
+                        "hi": -0.18421863,
+                        "hey": -0.071037032,
+                        "you": -0.627223134,
+                        "yo": -0.18225871,
+                        "good": -0.213177338,
+                        "morn": -0.078655012,
+                        "afternoon": -0.07144662,
+                        "day": -0.063075706,
+                        "how": -0.092932656,
+                        "can": -0.095722288,
+                        "i": -0.112885244,
+                        "rent": -0.017668061,
+                        "a": -0.017668061,
+                        "car": -0.477560639,
+                        "what": -0.459892571,
+                        "are": 2.206339598,
+                        "avail": -0.459892571,
+                        "for": -0.459892571,
+                        "rental": -0.535157144,
+                        "where": -0.038045954,
+                        "is": -0.142514899,
+                        "your": -0.038045954,
+                        "locat": -0.038045954,
+                        "to": -0.017162947,
+                        "chang": -0.002789634,
+                        "my": -0.095217168,
+                        "book": -0.002789634,
+                        "need": -0.017162947,
+                        "cancel": -0.017162947,
+                        "reserv": -0.017162947,
+                        "do": -0.55618614,
+                        "offer": -0.55618614,
+                        "ani": 2.110045671,
+                        "discount": -0.55618614,
+                        "there": 2.666232109,
+                        "addit": 2.666232109,
+                        "charg": 2.666232109,
+                        "extend": -0.075264595,
+                        "period": -0.075264595,
+                        "insur": -0.104468964,
+                        "includ": -0.104468964,
+                        "nonefeature": -0.188707396
+                      }
+                    },
+                    "extend_rental_query": {
+                      "bias": -0.220270294,
+                      "weights": {
+                        "hello": -0.073346868,
+                        "hi": -0.069718257,
+                        "hey": -0.061876524,
+                        "you": -0.061876524,
+                        "yo": -0.063224733,
+                        "good": -0.144386172,
+                        "morn": -0.054431915,
+                        "afternoon": -0.048408505,
+                        "day": -0.041545752,
+                        "how": 1.952986598,
+                        "can": 0.801485538,
+                        "i": 0.415697724,
+                        "rent": -0.890975773,
+                        "a": -0.890975773,
+                        "car": -1.179745555,
+                        "what": -0.288769305,
+                        "are": -0.288769305,
+                        "avail": -0.288769305,
+                        "for": -0.288769305,
+                        "rental": 2.555192947,
+                        "where": -0.000698886,
+                        "is": -0.077687502,
+                        "your": -0.000698886,
+                        "locat": -0.000698886,
+                        "to": -0.385787815,
+                        "chang": -1.151500702,
+                        "my": 1.306673765,
+                        "book": -1.151500702,
+                        "need": -0.385787815,
+                        "cancel": -0.385787815,
+                        "reserv": -0.385787815,
+                        "extend": 2.843962669,
+                        "period": 2.843962669,
+                        "insur": -0.076988615,
+                        "includ": -0.076988615,
+                        "nonefeature": -0.077232249
+                      }
+                    },
+                    "insurance_query": {
+                      "bias": 0.394075059,
+                      "weights": {
+                        "hello": -0.391212046,
+                        "hi": -0.387290835,
+                        "hey": -0.202834457,
+                        "you": -0.242342815,
+                        "yo": -0.381692529,
+                        "good": -0.356066883,
+                        "morn": -0.128834978,
+                        "afternoon": -0.118873239,
+                        "day": -0.108358756,
+                        "how": -0.066268034,
+                        "can": -0.100802302,
+                        "i": -0.146111712,
+                        "rent": -0.066268034,
+                        "a": -0.066268034,
+                        "car": -0.131522715,
+                        "what": -0.065254673,
+                        "are": -0.129295915,
+                        "avail": -0.065254673,
+                        "for": -0.065254673,
+                        "rental": -0.065254673,
+                        "where": -1.205119967,
+                        "is": 3.227880716,
+                        "your": -1.205119967,
+                        "locat": -1.205119967,
+                        "much": -0.010925971,
+                        "doe": -0.010925971,
+                        "it": -0.010925971,
+                        "cost": -0.010925971,
+                        "to": -0.056235366,
+                        "chang": -0.045460247,
+                        "my": -0.090769619,
+                        "book": -0.045460247,
+                        "need": -0.045309383,
+                        "cancel": -0.045309383,
+                        "reserv": -0.045309383,
+                        "do": -0.03950835,
+                        "offer": -0.03950835,
+                        "ani": -0.103549592,
+                        "discount": -0.03950835,
+                        "there": -0.064041242,
+                        "addit": -0.064041242,
+                        "charg": -0.064041242,
+                        "insur": 4.432999611,
+                        "includ": 4.432999611,
+                        "nonefeature": -0.395022601
+                      }
+                    },
+                    "None": {
+                      "bias": 1.496609369,
+                      "weights": {
+                        "hello": -1.297806144,
+                        "hi": -1.275593162,
+                        "hey": -0.658449531,
+                        "you": -0.773298264,
+                        "yo": -1.244342208,
+                        "good": -1.082410574,
+                        "morn": -0.369621545,
+                        "afternoon": -0.361636281,
+                        "day": -0.351152509,
+                        "how": -0.164519683,
+                        "can": -0.304243058,
+                        "i": -0.449557364,
+                        "rent": -0.155442595,
+                        "a": -0.198848799,
+                        "car": -0.367504448,
+                        "what": -0.168655649,
+                        "are": -0.400701731,
+                        "avail": -0.168655649,
+                        "for": -0.168655649,
+                        "rental": -0.177732751,
+                        "where": -0.265483499,
+                        "is": -0.652945876,
+                        "your": -0.265483499,
+                        "locat": -0.265483499,
+                        "much": -0.084160656,
+                        "doe": -0.084160656,
+                        "it": -0.084160656,
+                        "cost": -0.084160656,
+                        "to": -0.229475141,
+                        "chang": -0.180477902,
+                        "my": -0.334869474,
+                        "book": -0.180477902,
+                        "need": -0.145314485,
+                        "cancel": -0.145314485,
+                        "reserv": -0.145314485,
+                        "do": -0.114848778,
+                        "offer": -0.114848778,
+                        "ani": -0.346894801,
+                        "discount": -0.114848778,
+                        "request": -0.043406155,
+                        "specif": -0.043406155,
+                        "model": -0.043406155,
+                        "there": -0.232046008,
+                        "addit": -0.232046008,
+                        "charg": -0.232046008,
+                        "extend": -0.009077096,
+                        "period": -0.009077096,
+                        "insur": -0.387462318,
+                        "includ": -0.387462318,
+                        "nonefeature": 10.205868721
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "fixedError": false,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.7,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.08,
+                  "maxDecimals": 9,
+                  "log": false
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hey you"
+      ],
+      [
+        "en",
+        "yo"
+      ],
+      [
+        "en",
+        "good morning"
+      ],
+      [
+        "en",
+        "good afternoon"
+      ],
+      [
+        "en",
+        "good day"
+      ],
+      [
+        "en",
+        "How can I rent a car?"
+      ],
+      [
+        "en",
+        "What cars are available for rental?"
+      ],
+      [
+        "en",
+        "Where is your location?"
+      ],
+      [
+        "en",
+        "How much does it cost to rent a car?"
+      ],
+      [
+        "en",
+        "Can I change my booking?"
+      ],
+      [
+        "en",
+        "I need to cancel my reservation"
+      ],
+      [
+        "en",
+        "Do you offer any discounts?"
+      ],
+      [
+        "en",
+        "Can I request a specific car model?"
+      ],
+      [
+        "en",
+        "Are there any additional charges?"
+      ],
+      [
+        "en",
+        "How can I extend my rental period?"
+      ],
+      [
+        "en",
+        "Is insurance included?"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {}
+  },
+  "slotManager": {},
+  "responses": {
+    "en": {
+      "greeting": [
+        {
+          "response": "Hey!"
+        },
+        {
+          "response": "Hey there"
+        },
+        {
+          "response": "Hi"
+        },
+        {
+          "response": "Yo whatsup"
+        }
+      ],
+      "rental_query": [
+        {
+          "response": "You can rent a car by visiting our website or contacting our office."
+        }
+      ],
+      "availability_query": [
+        {
+          "response": "We have a variety of cars available. Please visit our website for the latest information."
+        }
+      ],
+      "location_query": [
+        {
+          "response": "Our main office is located in downtown CityX, but we have several branches. Check our website for the nearest one."
+        }
+      ],
+      "cost_query": [
+        {
+          "response": "The cost depends on the car model and rental duration. Please refer to our website for detailed pricing."
+        }
+      ],
+      "modify_booking_query": [
+        {
+          "response": "You can change your booking details through our website or by calling our support team."
+        }
+      ],
+      "cancel_booking_query": [
+        {
+          "response": "To cancel your reservation, please use the link provided in your booking confirmation email or contact our customer service."
+        }
+      ],
+      "discount_query": [
+        {
+          "response": "We offer various discounts throughout the year. Check out our promotions page or sign up for our newsletter to get the latest deals."
+        }
+      ],
+      "specific_car_query": [
+        {
+          "response": "You can request specific car models during the booking process. Availability may vary based on your rental location and date."
+        }
+      ],
+      "extra_charges_query": [
+        {
+          "response": "Additional charges may apply for extras like GPS, child seats, or additional drivers. These will be detailed during the booking process."
+        }
+      ],
+      "extend_rental_query": [
+        {
+          "response": "To extend your rental period, please contact our customer service before your rental ends to check availability."
+        }
+      ],
+      "insurance_query": [
+        {
+          "response": "Basic insurance is included with every rental. You can opt for additional coverage options during the booking process for extra peace of mind."
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "utteranceDict": {
+    "?": "help"
+  }
+}
