@@ -7,6 +7,7 @@ const morgan = require('morgan')
 const notFound = require("./middleware/not-found")
 const errorHandlerMiddleware = require("./middleware/error-handlers")
 const expressFileUpload = require('express-fileupload')
+import path from 'path';
 //connect to cloud storage
 const cloudinary = require("cloudinary").v2
 cloudinary.config({
@@ -51,6 +52,11 @@ app.use("/api/v1/reviews/", authenticateUser, reviews)
 const chatbot = require("./routes/chabot")
 app.use("/api/v1/chatbot/", authenticateUser, chatbot)
 
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+})
 app.use(notFound)
 app.use(errorHandlerMiddleware)
 const port = process.env.PORT || 3000
