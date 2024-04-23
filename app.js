@@ -50,7 +50,7 @@ const reviews = require("./routes/review")
 app.use("/api/v1/reviews/", authenticateUser, reviews)
 
 const chatbot = require("./routes/chabot")
-app.use("/api/v1/chatbot/", authenticateUser, chatbot)
+app.use("/api/v1/chatbot/", chatbot)
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
