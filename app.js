@@ -7,7 +7,7 @@ const morgan = require('morgan')
 const notFound = require("./middleware/not-found")
 const errorHandlerMiddleware = require("./middleware/error-handlers")
 const expressFileUpload = require('express-fileupload')
-import path from 'path';
+const path = require('path');
 //connect to cloud storage
 const cloudinary = require("cloudinary").v2
 cloudinary.config({
